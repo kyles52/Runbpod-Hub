@@ -1,0 +1,39 @@
+{
+    "tests": [
+      {
+        "name": "test_basic_frame_processing",
+        "input": {
+          "frame_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+          "task": "vlm",
+          "prompt": "Describe this image"
+        },
+        "timeout": 120,
+        "expected_output": {
+          "status": "success"
+        }
+      },
+      {
+        "name": "test_ocr_processing",
+        "input": {
+          "frame_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+          "task": "ocr"
+        },
+        "timeout": 120,
+        "expected_output": {
+          "status": "success"
+        }
+      },
+      {
+        "name": "test_both_vlm_and_ocr",
+        "input": {
+          "frame_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+          "task": "both",
+          "prompt": "What do you see?"
+        },
+        "timeout": 180,
+        "expected_output": {
+          "status": "success"
+        }
+      }
+    ]
+  }
